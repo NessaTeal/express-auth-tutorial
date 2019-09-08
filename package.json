@@ -1,0 +1,21 @@
+{
+  "name": "express-auth-tutorial",
+  "version": "1.0.0",
+  "description": "Source code for the article \"How to keep your back-end secure yet simple to develop\"",
+  "main": "index.js",
+  "scripts": {
+    "init": "npm install nodemon -g",
+    "start": "nodemon index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/vadimjprokopev/express-auth-tutorial.git"
+  },
+  "keywords": [],
+  "author": "Vadim Prokopev",
+  "license": "MIT",
+  "homepage": "https://github.com/vadimjprokopev/express-auth-tutorial#readme",
+  "dependencies": {
+    "express": "^4.17.1"
+  }
+}
