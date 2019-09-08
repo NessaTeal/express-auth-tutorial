@@ -1,4 +1,5 @@
 const express = require('express');
+const authentication = require('./authentication.js');
 
 const resources = [
   {id: 1, data: "First resource"},
@@ -7,8 +8,8 @@ const resources = [
 
 const app = express();
 
+app.use(authentication); // call authentication before each request
 app.get('/resources/:resourceId', (req, res) => {
-  // + to convert string to number
   let resource = resources.find(resource => resource.id === +req.params.resourceId);
 
   if (!resource) {
