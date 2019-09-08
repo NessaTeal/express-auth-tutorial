@@ -33,7 +33,7 @@ const createResource = (req, res) => {
     userId: req.userId
   });
 
-  res.status(201).end();
+  res.status(201).send('Resource created');
 };
 
 const router = require('express').Router();
