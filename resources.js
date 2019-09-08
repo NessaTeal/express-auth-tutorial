@@ -20,12 +20,26 @@ const resourceMiddleware = (req, res, next) => {
 const getResource = (req, res) => {
   res.send(`Resource data: ${req.resource.data}`);
 };
+// new handler function
+const createResource = (req, res) => {
+  if (!req.body.data) {
+    res.status(400).end();
+    return;
+  }
 
-// create new router object
+  resources.push({
+    id: resources.length + 1,
+    data: req.body.data,
+    userId: req.userId
+  });
+
+  res.status(201).end();
+};
+
 const router = require('express').Router();
 
-// attach handlers to route the same way as to the app
 router.use('/:resourceId', resourceMiddleware);
 router.get('/:resourceId', getResource);
+router.post('/', createResource); // attaching new function
 
 module.exports = router;
