@@ -17,6 +17,6 @@
   "homepage": "https://github.com/vadimjprokopev/express-auth-tutorial#readme",
   "dependencies": {
     "express": "^4.17.1",
-    "jsonwebtoken": "^8.5.1"
+    "jsonwebtoken": "^9.0.0"
   }
 }
